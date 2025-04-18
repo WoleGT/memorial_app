@@ -4,44 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
  </head>
- <body style="background-color: #FAFAFA">
+ <body style="background-color: #E1E2E4">
     <style>
          img{
-            border-radius: 10%;
+            border-radius: 50px;
             padding: 15px
          }
+         .carousel img {
+        cursor: pointer;
+        }
+        .modal-img {
+       max-width: 50%;
+       height: 50%;
+        }
         
     </style>
 
  <img src="{{url('profile_pic.jpeg')}}" width="200" height="200" class="img-fluid" image alt="Image"/>
- <p>In Loving Memory of</p>
- <h1><span style="font-size:25px">Elder Oluwole Akanni</span> <br>George-Taylor</h1>
+ <marquee direction="down" scrollamount="2px" height="30px" style="text-align:center;">In Loving Memory of:</marquee>
+ <a style="font-weight:bolder; font-size:30px;"><span style="font-size:25px">Elder Oluwole Akanni</span> George-Taylor</a>
     <h3> 13th February 1948 - 17th January 2025</h3>
     <a>77 YEARS OF FULFILLED LIFE</a>
 
 @extends('layouts.master')
 @section('content')
     
-<!-- <h3>Early Life</h3>
-<p>Oluwole Akanni George Taylor was born on the 13th February 1948.<br>
- He started his primary school at Baptist School Apapa Road Ebute Metta Lagos, Nigeria in January 1953. <br>
- He later moved to Ibadan in 1958 to continue his primary school at Methodist School, Akintola Road Ibadan.<br> He got
- admission to Mayflower School Ikene in 1961 and passed out of Mayflower school with flying colors.
- <h3>Transition to Adulthood</h3>
- <p>The young and vibrant Oluwole started work at a company in Badagry in which the then Western Nigeria Government had an interest.<br>
- Diligent and intelligent staff he was, this earn him a transfer to the company's headquarters outside the shores of Nigeria and started life in Italy.<br> While in Italy he continued his diligent work ethic and developed enterprenueral skills so much that by the time he would return to Nigeria he was full of business ideas.
- <br>Upon returning to the Country he worked in this company for a little while, joined another company that deals in Paper products as Sales Manager.<br> Shortly afterwards he started his own company -Wole George-Taylor & Co. where he thrived and build a successful brand. He is fondly called 007.</p>
-</p> -->
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <a>Biography</a>
+      <img src="{{asset('img/Biography.jpeg')}}" class="d-block w-100" alt="Slide 1" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="{{asset('img/Biography.jpeg')}}">
+    </div>
+    <div class="carousel-item">
+      <a>Funeral Details</a>
+      <img src="{{url('Burial_Details.jpeg')}}" class="d-block w-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <a>Order of Funeral Service</a>
+      <img src="{{url('Order_Funeral_Service.jpeg')}}" class="d-block w-100" alt="Slide 3">
+      <button href="" style="color:black; border-radius:5px;border:1px white solid">Download PDF</button>
+    </div>
+    <div class="carousel-item">
+      <a>Live Streaming</a>
+      <img src="{{asset('img/Live_Streaming.jpg')}}" class="d-block w-100" alt="Slide 4">
+      <button href="" style="color:black; border-radius:5px;border:1px white solid">Watch now</button>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4"></button>
+  </div>
+</div>
+
+<!-- Modal for Zoomed Image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body p-0">
+        <img id="modalImage" src="{{asset('img/Biography.jpeg')}}" class="modal-img w-100" alt="Zoomed Slide">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <h5>Carousal
+   <Biography>
+      <Funeral Details>
+         <Order of program downloan>
+            <Watch live streaming <button style="background-color:green; color:white;" onclick="window.location.href='www.instagram.com/wolegt_?upcoming_event_id=18036329114273157';"> Watch Live</button>> -->
+</h5>
 <h3>Survived by:</h3>
     <a> Wife, Children and Grandchildren </a>
-  <h3>Funeral</h3>
-  <a>Funeral has been schedule to take place on the 24th and 25th April 2025.</a>
-  <button style="background-color:green; color:white;" onclick="window.location.href='www.instagram.com/wolegt_?upcoming_event_id=18036329114273157';"> Watch Live</button>
-
-
 
 @endsection
+
+
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Update modal image on click
+  document.querySelectorAll('[data-bs-toggle="modal"]').forEach(img => {
+    img.addEventListener('click', function () {
+      const zoomImg = this.getAttribute('data-img');
+      document.getElementById('modalImage').src = zoomImg;
+    });
+  });
+</script>
+
 
 </body>
 </html>

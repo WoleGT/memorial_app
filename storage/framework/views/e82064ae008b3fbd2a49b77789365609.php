@@ -14,15 +14,22 @@
     body{
         text-align: center;
     }
+    #a1{
+        text-decoration:none;
+    }
+    #a1:hover{
+        text-decoration:underline;
+
+    }
 </style>
 <body>
     <header style=padding-top:20px>
         <nav>
-            <a href="<?php echo e(route('memorial.index')); ?>" style="text-decoration:none">Biography</a> |
-            <a href="<?php echo e(route('comments.index')); ?>" style="text-decoration:none">Tributes</a>  |
-            <a href="<?php echo e(route('images.index')); ?>" style="text-decoration:none">Photos</a> |
-            <a href="<?php echo e(route('videos.index')); ?>" style="text-decoration:none">Videos</a> |
-            <a href="<?php echo e(route('rsvp.index')); ?>" style="text-decoration:none">RSVP</a>
+            <a href="<?php echo e(route('memorial.index')); ?>" id="a1">Biography</a> |
+            <a href="<?php echo e(route('comments.index')); ?>" id="a1">Tributes</a>  |
+            <a href="<?php echo e(route('images.index')); ?>" id="a1">Photos</a> |
+            <a href="<?php echo e(route('videos.index')); ?>" id="a1">Videos</a> |
+            <a href="<?php echo e(route('rsvp.index')); ?>" id="a1">RSVP</a>
            
         </nav>
         
@@ -35,7 +42,7 @@
     <br>
     <footer>
         <a>&copy;<?php echo e(date('Y')); ?> Oluwole George-Taylor Snr. Memorial</a><br>
-        <a>site developed by: <a href="https://wolegt.vercel.app/">wolegtconsulting.dev</a></a>
+        <a>site developed by: <a href="https://wolegt.vercel.app/" id="a1">wolegtconsulting.dev</a></a>
     </footer>
 </body>
 </html>

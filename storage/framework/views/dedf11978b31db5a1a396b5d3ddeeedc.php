@@ -13,7 +13,7 @@
       background-color: #f8f9fa;
     }
     .navbar {
-      background-color: green;
+      background-color:  grey;
     }
     .navbar-brand, .nav-link {
       color: white !important;
@@ -63,7 +63,7 @@
           <div class="card-body">
             <img src="<?php echo e(url('profile_pic.jpeg')); ?>" alt="Host 1" class="rounded-circle host-img mx-auto d-block">
             <h5 class="card-title mt-2">Host 1 - Aunty B'</h5>
-            <button class="button" style="border:2px solid green ; border-radius: 5px"  onclick="selectHost('Host 1', 'booking1.html')">Select</button>
+            <button class="button" style="border:1px solid gray ; border-radius: 5px"  onclick="selectHost('Host 1', 'booking1.html')">Select</button>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@
           <div class="card-body">
             <img src="<?php echo e(url('profile_pic.jpeg')); ?>" alt="Host 2" class="rounded-circle host-img mx-auto d-block">
             <h5 class="card-title mt-2">Host 2 - Ay.</h5>
-            <button class="button" style="border:2px solid green ; border-radius: 5px" onclick="selectHost('Host 2', 'booking2.html')">Select</button>
+            <button class="button" style="border:1px solid gray ; border-radius: 5px" onclick="selectHost('Host 2', 'booking2.html')">Select</button>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
           <div class="card-body">
             <img src="<?php echo e(url('profile_pic.jpeg')); ?>" alt="Host 3" class="rounded-circle host-img mx-auto d-block">
             <h5 class="card-title mt-2">Host 3 - Wale</h5>
-            <button class="button" style="border:2px solid green ; border-radius: 5px" onclick="selectHost('Host 3', 'booking3.html')">Select</button>
+            <button class="button" style="border:1px solid gray ; border-radius: 5px" onclick="selectHost('Host 3', 'booking3.html')">Select</button>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
           <div class="card-body">
             <img src="<?php echo e(url('profile_pic.jpeg')); ?>" alt="Host 4" class="rounded-circle host-img mx-auto d-block">
             <h5 class="card-title mt-2">Host 4 - Aunty Shade</h5>
-            <button class="button" style="border:2px solid green ; border-radius: 5px" onclick="selectHost('Host 4', 'booking4.html')">Select</button>
+            <button class="button" style="border:1px solid gray ; border-radius: 5px" onclick="selectHost('Host 4', 'booking4.html')">Select</button>
           </div>
         </div>
       </div>
@@ -103,7 +103,7 @@
           <div class="card-body">
             <img src="<?php echo e(url('profile_pic.jpeg')); ?>" alt="Host 5" class="rounded-circle host-img mx-auto d-block">
             <h5 class="card-title mt-2">Host 5 - Labo</h5>
-            <button class="button" style="border:2px solid green ; border-radius: 5px" onclick="selectHost('Host 5', 'booking5.html')">Select</button>
+            <button class="button" style="border:1px solid gray ; border-radius: 5px" onclick="selectHost('Host 5', 'booking5.html')">Select</button>
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@
           <div class="card-body">
             <img src="<?php echo e(url('profile_pic.jpeg')); ?>" alt="Host 6" class="rounded-circle host-img mx-auto d-block">
             <h5 class="card-title mt-2">Host 6 - Junior</h5>
-            <button class="button" style="border:2px solid green ; border-radius: 5px" onclick="selectHost('Host 6', 'booking6.html')">Select</button>
+            <button class="button" style="border:1px solid gray ; border-radius: 5px" onclick="selectHost('Host 6', 'booking6.html')">Select</button>
           </div>
         </div>
       </div>
@@ -123,7 +123,7 @@
           <div class="card-body">
             <img src="<?php echo e(url('profile_pic.jpeg')); ?>" alt="Host 7" class="rounded-circle host-img mx-auto d-block">
             <h5 class="card-title mt-2">Host 7 - Folabi</h5>
-            <button class="button" style="border:2px solid green ; border-radius: 5px" onclick="selectHost('Host 7', 'booking7.html')">Select</button>
+            <button class="button" style="border:1px solid gray ; border-radius: 5px" onclick="selectHost('Host 7', 'booking7.html')">Select</button>
           </div>
         </div>
       </div>
@@ -133,7 +133,7 @@
           <div class="card-body">
             <img src="<?php echo e(url('profile_pic.jpeg')); ?>" alt="Host 8" class="rounded-circle host-img mx-auto d-block">
             <h5 class="card-title mt-2">Host 8 - George-Taylors</h5>
-            <button class="button" style="border:2px solid green ; border-radius: 5px" onclick="selectHost('Host 8', 'booking8.html')">Select</button>
+            <button class="button" style="border:1px solid gray ; border-radius: 5px" onclick="selectHost('Host 8', 'booking8.html')">Select</button>
           </div>
         </div>
       </div>

@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
  </head>
 
  <style>
          #image1{
-            border-radius: 10%;
+            border-radius: 50px;
             padding: 15px
          }
 
@@ -20,10 +21,10 @@
          }
         
     </style>
- <body style="background-color: #FAFAFA">
+ <body style="background-color: #E1E2E4">
  <img src="<?php echo e(url('profile_pic.jpeg')); ?>" width="200" height="200" class="img-fluid"  id="image1"  image alt="Image"/>
- <p>In Loving Memory of</p>
- <h1><span style="font-size:25px">Elder Oluwole Akanni</span> <br>George-Taylor</h1>
+ <marquee direction="down" scrollamount="2px" height="30px" style="text-align:center;">In Loving Memory of:</marquee>
+ <a style="font-weight:bolder; font-size:35px;"><span style="font-size:25px">Elder Oluwole Akanni</span> <br>George-Taylor</a>
     <h3> 13th February 1948 - 17th January 2025</h3>
     <a>77 YEARS OF FULFILLED LIFE</a> 
  
