@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Party Booking - Select Host</title>
+  <title>Oluwole George-Taylor Snr.Memorial</title>
+  <link rel="icon" href="{{asset('profile_pic.jpeg')}}">
   <!-- Bootstrap 5 CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     body {
-      background-color: #f8f9fa;
+      background-color: #E1E2E4;
     }
     .navbar {
-      background-color:  grey;
+      background-color:  gray;
     }
     .navbar-brand, .nav-link {
       color: white !important;
@@ -32,20 +33,21 @@
       transform: scale(1.05);
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
+    
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
-    <div class="container">
+    <div class="container"> 
       <a class="navbar-brand" href="#"><i class="fas fa-glass-cheers"></i> Select your host</a>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fas fa-calendar-check"></i> RSVP</a>
+          <a class="nav-link" href="tel:+2348023653151" id="rsvp"><i class="fas fa-calendar-check"></i> RSVP</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fas fa-chair"></i> Book a Table</a>
+          <a class="nav-link" href="booking8.html"><i class="fas fa-chair"></i> Book a Table</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="rsvp.html"><i class="fas fa-location"></i> Get Direction</a>
@@ -150,5 +152,10 @@
       window.location.href = bookingPage;
     }
   </script>
+
+<footer>
+  <a>&copy;{{ date('Y') }} Oluwole George-Taylor Snr. Memorial</a><br>
+  <a>site developed by: <a href="https://wolegt.vercel.app/" id="a1">wolegtconsulting.dev</a></a>
+  </footer>
 </body>
 </html>

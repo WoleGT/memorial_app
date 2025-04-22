@@ -3,31 +3,16 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Oluwole George-Taylor Snr Memorial</title>
+    <meta name="Keyword" Content="Web App Development, Software Development">
+    <meta name="Keyword" Description="Website Development, Custom Website Solutions">
+    <meta name="Keyword" Author="wolegtconsulting.dev">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">   
+    <link rel="icon" href="<?php echo e(asset('profile_pic.jpeg')); ?>">
  </head>
-
- <style>
-         #image1{
-            border-radius: 50px;
-            padding: 15px
-         }
-
-         #image2{
-            height: 200px;
-            width: 250px;
-            border-radius:10px
-
-         }
-        
-    </style>
- <body style="background-color: #E1E2E4">
- <img src="<?php echo e(url('profile_pic.jpeg')); ?>" width="200" height="200" class="img-fluid"  id="image1"  image alt="Image"/>
- <marquee direction="down" scrollamount="2px" height="30px" style="text-align:center;">In Loving Memory of:</marquee>
- <a style="font-weight:bolder; font-size:35px;"><span style="font-size:25px">Elder Oluwole Akanni</span> <br>George-Taylor</a>
-    <h3> 13th February 1948 - 17th January 2025</h3>
-    <a>77 YEARS OF FULFILLED LIFE</a> 
- 
+ <body style="background-color: #E1E2E4"> 
 
 
 
@@ -42,7 +27,7 @@
     <br>
     <br>
     <?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-    <img src="<?php echo e(Storage::url($image->path)); ?>" width="200" id="image2">
+    <img src="<?php echo e(Storage::url($image->path)); ?>" width="200">
     <p><?php echo e($image->description); ?></p>
     <form action="<?php echo e(route('images.destroy', $image->id)); ?>" method="POST" onsubmit="return confirm('Are you sure?');">
         <?php echo csrf_field(); ?>
@@ -53,7 +38,7 @@
 <?php $__env->stopSection(); ?>
 
 </body>
- </html>
+</html>
 
 
 

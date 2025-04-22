@@ -3,112 +3,62 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
- </head>
+    <title>Oluwole George-Taylor Snr Memorial</title>
+    <meta name="Keyword" Content="Web App Development, Software Development">
+    <meta name="Keyword" Description="Website Development, Custom Website Solutions">
+    <meta name="Keyword" Author="wolegtconsulting.dev">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">   
+    <link rel="icon" href="{{asset('profile_pic.jpeg')}}">
+  </head>
  <body style="background-color: #E1E2E4">
-    <style>
-         img{
-            border-radius: 50px;
-            padding: 15px
-         }
-         .carousel img {
-        cursor: pointer;
-        }
-        .modal-img {
-       max-width: 50%;
-       height: 50%;
-        }
-        
-    </style>
-
- <img src="{{url('profile_pic.jpeg')}}" width="200" height="200" class="img-fluid" image alt="Image"/>
- <marquee direction="down" scrollamount="2px" height="30px" style="text-align:center;">In Loving Memory of:</marquee>
- <a style="font-weight:bolder; font-size:30px;"><span style="font-size:25px">Elder Oluwole Akanni</span> George-Taylor</a>
-    <h3> 13th February 1948 - 17th January 2025</h3>
-    <a>77 YEARS OF FULFILLED LIFE</a>
+ 
 
 @extends('layouts.master')
 @section('content')
     
 
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    <a>Biography</a>
-      <img src="{{asset('img/Biography.jpeg')}}" class="d-block w-100" alt="Slide 1" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="{{asset('img/Biography.jpeg')}}">
-    </div>
-    <div class="carousel-item">
-      <a>Funeral Details</a>
-      <img src="{{url('Burial_Details.jpeg')}}" class="d-block w-100" alt="Slide 2">
-    </div>
-    <div class="carousel-item">
-      <a>Order of Funeral Service</a>
-      <img src="{{url('Order_Funeral_Service.jpeg')}}" class="d-block w-100" alt="Slide 3">
-      <button href="" style="color:black; border-radius:5px;border:1px white solid">Download PDF</button>
-    </div>
-    <div class="carousel-item">
-      <a>Live Streaming</a>
-      <img src="{{asset('img/Live_Streaming.jpg')}}" class="d-block w-100" alt="Slide 4">
-      <button href="" style="color:black; border-radius:5px;border:1px white solid">Watch now</button>
-    </div>
-  </div>
-
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-
-  <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4"></button>
-  </div>
-</div>
-
-<!-- Modal for Zoomed Image -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content bg-transparent border-0">
-      <div class="modal-body p-0">
-        <img id="modalImage" src="{{asset('img/Biography.jpeg')}}" class="modal-img w-100" alt="Zoomed Slide">
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- <h5>Carousal
-   <Biography>
-      <Funeral Details>
-         <Order of program downloan>
-            <Watch live streaming <button style="background-color:green; color:white;" onclick="window.location.href='www.instagram.com/wolegt_?upcoming_event_id=18036329114273157';"> Watch Live</button>> -->
 </h5>
 <h3>Survived by:</h3>
-    <a> Wife, Children and Grandchildren </a>
+    <p> Wife, Children and Grandchildren </p>
 
+
+    <div class="col-md-6">
+             <button type="button" class="btn btn-outline-dark" onmouseover="typeWriter()">Read Biography</button>
+             <p id="demo" style="font-size: 15px; background-color: white; color: black; border-radius: 15px"></p>            
+    </div>
+     
+    <a>Resources:</a>
+    <ul style="padding-left:40px">
+        <li>  
+           <a href="{{asset('My School of Prayer by Oluwole George-Taylor.pdf')}}"  target="_blank" style="text-decoration:none" id="a1">Wake-keep Program</a>
+        </li>
+        <li>
+           <a href="{{asset('My School of Prayer by Oluwole George-Taylor.pdf')}}" target="_blank" style="text-decoration:none" id="a1">Order of Funeral Service</a>
+        </li>
+        <li>
+           <a href="https://www.instagram.com/wolegt_?upcoming_event_id=18036329114273157" target="_blank" style="text-decoration:none" id="a1">Live Streaming</a>
+        </li>
+    </ul>
+    <!-- <a href="https://www.instagram.com/wolegt_?upcoming_event_id=18036329114273157" target="_blank"><button type="button" class="btn btn-outline-dark">Live Streaming</button></a> -->
+   
 @endsection
 
 
-<!-- Bootstrap JS Bundle (includes Popper) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
-  // Update modal image on click
-  document.querySelectorAll('[data-bs-toggle="modal"]').forEach(img => {
-    img.addEventListener('click', function () {
-      const zoomImg = this.getAttribute('data-img');
-      document.getElementById('modalImage').src = zoomImg;
-    });
-  });
-</script>
+        var i = 0;
+        var txt = 'Oluwole Akanni George-Taylor was born on the 13th February 1948, to the late Chief Nathaniel Oluwemimo George-Taylor and Mrs. Adeola Abeke George-Taylor "Sweetie" (nee Agbaje). He started his primary school at Baptist School, Apapa Road, Ebute Metta, Lagos in January 1953, and later on he moved to Ibadan in 1958 with his Dad, who was then the Chief Industrial Officer, Ministry of Trade and Industry of the Western Region of Nigeria. He continued his primary school education at Methodist School, Akintola Road, Ibadan. After his primary education, he proceeded to the prestigious Mayflower School, Ikene, Ogun State in 1961 for his secondary education. Thereafter he started working at the then Old Western Region of Nigeria Government and was posted to a company in Badagry. He was sent to the company"s head office in Italy where he worked for sometime before returning to Lagos, Nigeria. Upon returning to the country he joined another company which is into paper products as a salesman.  He then proceeded to attend a Technical College in Lagos, where he learnt the skills in craftsmanship in building construction. He had developed passion for building construction as a result of the magnificent architectural style and designs of building structures he saw during his stay in Italy. After passing out of college, he decided to settle down in Ibadan, a place he chose as home. He worked at different times with different Civil Engineering and Building Construction Companies in Ibadan, such as Abdullahi & Awomolo Nigeria Limited and Alhaji Oliyide & Sons Limited, just to mention a few, where he was involved in some public & government building projects built around the Ibadan metropolis and across states in Nigeria. He later started his own company, Wole George-Taylor & Co., a general merchant and building contractor firm. In 1977, he got married to his beautiful wife, Abimbola Boluwatife George-Taylor (nee Akeredolu-Ale) in Ibadan, the capital of Oyo State. They are both blessed with Children and many Grandchildren. Among his circle of friends, he was fondly called a nickname - "007", after his favorite movie actor in the seventies, "Roger Moore", also known as James Bond, who starred in the movie - The Spy Who Loved Me. Among his siblings, they called him a nickname - "Dganga himself".  May God Almighty grant him eternal rest through Jesus Christ. Amen'
+        var speed = 50;
+        
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+        </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 </body>
