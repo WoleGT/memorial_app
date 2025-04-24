@@ -40,5 +40,5 @@ jobs:
           username:  memorial@oluwolegeorgetaylorsnrmemorial.online
           password: OluwoleMemorial2025!@
         
-      - name: 🔄 Optimize Application
-        run: php artisan cache:clear
+      # - name: 🔄 Optimize Application
+      #   run: php artisan cache:clear
