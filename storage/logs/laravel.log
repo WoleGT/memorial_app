@@ -3634,3 +3634,7 @@ Did you mean one of these?
 [stacktrace]
 #0 {main}
 "} 
+[2025-04-23 19:57:19] local.ERROR: Maximum execution time of 60 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 60 seconds exceeded at C:\\xampp\\htdocs\\memorial-app\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:28)
+[stacktrace]
+#0 {main}
+"} 
