@@ -41,4 +41,4 @@ jobs:
           password: OluwoleMemorial2025!@
         
       - name: 🔄 Optimize Application
-        run: php artisan optimize:clear
+        run: php artisan cache:clear
