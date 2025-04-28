@@ -14,10 +14,10 @@ jobs:
       - name: Get the latest code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
         with:
-          node-version: '18'
+          php-version: '8.2'
 
       - name: Install Dependencies
         run: composer install --no-dev --prefer-dist --ignore-platform-reqs
