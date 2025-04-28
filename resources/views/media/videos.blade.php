@@ -14,7 +14,7 @@
 
  <style>
          video{
-            border-radius: 50px;
+            border-radius: 45px;
          }     
  </style>
  <body style="background-color: #E1E2E4">
