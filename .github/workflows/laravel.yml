@@ -14,10 +14,15 @@ jobs:
       - name: Get the latest code
         uses: actions/checkout@v3
 
-      - name: Set up PHP
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install PHP & Composer
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version: '8.2'  # or your server PHP version
 
       - name: Install Dependencies
         run: composer install --no-dev --prefer-dist --ignore-platform-reqs
@@ -29,16 +34,15 @@ jobs:
 
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
-        
-     
+
+      - name: Create Storage Symlink
+        run: php artisan storage:link
 
       ## Deploy to Staging
       - name: 📂 Deploy to MyAfrimall API
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server:  ftp.oluwolegeorgetaylorsnrmemorial.online
-          username:  memorial@oluwolegeorgetaylorsnrmemorial.online
+          server: ftp.oluwolegeorgetaylorsnrmemorial.online
+          username: memorial@oluwolegeorgetaylorsnrmemorial.online
           password: OluwoleMemorial2025!@
-        
-      # - name: 🔄 Optimize Application
-      #   run: php artisan cache:clear
+
