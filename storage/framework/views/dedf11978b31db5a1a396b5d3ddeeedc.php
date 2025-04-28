@@ -47,10 +47,10 @@
           <a class="nav-link" href="tel:+2348023653151" id="rsvp"><i class="fas fa-calendar-check"></i> RSVP</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="booking8.html"><i class="fas fa-chair"></i> Book a Table</a>
+          <a class="nav-link" href="<?php echo e(asset('booking8.html')); ?>"><i class="fas fa-chair"></i> Book a Table</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="rsvp.html"><i class="fas fa-location"></i> Get Direction</a>
+          <a class="nav-link" href="<?php echo e(asset('rsvp.html')); ?>"><i class="fas fa-location"></i> Get Direction</a>
         </li>
       </ul>
     </div>
