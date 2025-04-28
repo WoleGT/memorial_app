@@ -17,9 +17,9 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version: '8.2' # adjust if your server uses different PHP
 
-      - name: Install Dependencies
+      - name: Install Composer Dependencies
         run: composer install --no-dev --prefer-dist --ignore-platform-reqs
 
       - name: Cache Config & Views
@@ -29,16 +29,10 @@ jobs:
 
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
-        
-     
 
-      ## Deploy to Staging
       - name: 📂 Deploy to MyAfrimall API
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server:  ftp.oluwolegeorgetaylorsnrmemorial.online
-          username:  memorial@oluwolegeorgetaylorsnrmemorial.online
+          server: ftp.oluwolegeorgetaylorsnrmemorial.online
+          username: memorial@oluwolegeorgetaylorsnrmemorial.online
           password: OluwoleMemorial2025!@
-        
-      # - name: 🔄 Optimize Application
-      #   run: php artisan cache:clear
