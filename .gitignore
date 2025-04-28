@@ -32,40 +32,6 @@ Thumbs.db
 composer.lock
 
 # npm artifacts
-# Laravel .gitignore for production-ready projects
-
-/vendor/
-/node_modules/
-
-/.env
-/.env.example
-
-# Laravel storage (but allow public uploads)
-storage/*
-!storage/app/public/
-!storage/app/public/*
-
-# Cache and logs
-bootstrap/cache/
-/storage/logs/
-/storage/framework/cache/
-/storage/framework/sessions/
-/storage/framework/views/
-
-# IDE files
-*.sublime-project
-*.sublime-workspace
-.idea
-.vscode
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Composer artifacts
-composer.lock
-
-# npm artifacts
 npm-debug.log
 yarn-error.log
 
@@ -78,3 +44,4 @@ public/hot
 /public/build
 /build
 vite.config.js
+
