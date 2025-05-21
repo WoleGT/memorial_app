@@ -25,7 +25,7 @@
     
 </style>
 <body>
-<img src="<?php echo e(asset('profile_pic2.jpeg')); ?>" width="200" height="200" class="img-fluid" image alt="Image"/>
+<img src="<?php echo e(url('profile_pic2.jpeg')); ?>" width="200" height="200" class="img-fluid" image alt="Image"/>
  <marquee direction="down" scrollamount="2px" height="30px" style="text-align:center;">In Loving Memory of:</marquee>
  <a style="font-weight:bolder; font-size:30px;"><span style="font-size:25px">Elder Oluwole Akanni</span> George-Taylor</a>
  <h6> 13th February 1948 - 17th January 2025</h6>

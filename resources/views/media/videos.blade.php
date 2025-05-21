@@ -56,6 +56,12 @@
         @endauth
     @endforeach
 
+    <a href="https://youtu.be/WGyd_FAoN0Y?si=kfPBs2EdeuqACig3" target="_blank" style="text-decoration:none" id="a1">Watch funeral ceremony Highlights</a>
+    <br>
+    <br>
+    <br>
+    <br>
+
     @guest
         <li><a href="{{ route('login') }}">Login</a></li>
     @else

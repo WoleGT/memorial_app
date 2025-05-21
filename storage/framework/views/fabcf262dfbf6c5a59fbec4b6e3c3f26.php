@@ -27,7 +27,7 @@
     <br>
     <br>
     <?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-    <img src="<?php echo e(Storage::url($image->path)); ?>" width="200">
+    <img src="<?php echo e(asset('storage/app/public/' .$image->path)); ?>" width="200">
     <p><?php echo e($image->description); ?></p>
     <form action="<?php echo e(route('images.destroy', $image->id)); ?>" method="POST" onsubmit="return confirm('Are you sure?');">
         <?php echo csrf_field(); ?>

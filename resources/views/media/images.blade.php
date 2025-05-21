@@ -27,7 +27,7 @@
     <br>
     <br>
     @foreach($images as $image)
-    <img src="{{ Storage::url($image->path) }}" width="200">
+    <img src="{{ url('storage/app/public/' .$image->path) }}" width="200">
     <p>{{ $image->description }}</p>
     <form action="{{ route('images.destroy', $image->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
         @csrf
